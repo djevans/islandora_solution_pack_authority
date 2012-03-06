@@ -1,0 +1,5 @@
+name = Islandora Authority Solution Pack
+description = Installs a name-authority content model and associated form for EAC-CPF metadata
+version = 0.1
+core = 6.x
+dependencies[] = fedora_repository
