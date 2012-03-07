@@ -1,0 +1,16 @@
+<?php
+
+function islandora_authority_sp_install() {
+  /* load forms */
+  module_load_include('inc','fedora_repository','fedora_repository.solutionpacks');
+  $path = drupal_get_path('module','islandora_authority_sp');
+  $dom = new DOMDocument();
+  $dom->load("$path/xml/eac-cpf-form.xml");
+  solution_pack_add_form('Islandora EAC-CPF Authority Form',$dom->saveXML());
+  solution_pack_add_form_association('islandora:authorityCModel','Islandora EAC-CPF Authority Form');
+}
+
+function islandora_authority_sp_uninstall() {
+  /* remove form and form associations */
+  /* purge objects, if possible? */
+}
