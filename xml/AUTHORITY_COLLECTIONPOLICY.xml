@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection_policy xmlns="http://www.islandora.ca"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.islandora.ca http://syn.lib.umanitoba.ca/collection_policy.xsd" name="">
+    <content_models>
+        <content_model name="Authority" dsid="ISLANDORACM" namespace="grinnell-auth" pid="islandora:authorityCModel"/>
+    </content_models>
+    <search_terms>
+        <term default="true" field="dc.title">dc.title</term>
+    </search_terms>
+    <relationship>isMemberOfCollection</relationship>
+</collection_policy>
