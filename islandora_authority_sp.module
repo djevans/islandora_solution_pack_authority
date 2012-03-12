@@ -5,9 +5,9 @@
  */
 function islandora_authority_sp_required_fedora_objects() {
   $module_path = drupal_get_path('module','islandora_authority_sp');
-	$objects = array(
-	  'islandora_authority_sp' => array(
-	    'module' => 'islandora_authority_sp',
+  $objects = array(
+    'islandora_authority_sp' => array(
+      'module' => 'islandora_authority_sp',
       'title' => 'Islandora Authority Solution Pack',
       'objects' => array(
         array(
@@ -35,7 +35,22 @@ function islandora_authority_sp_required_fedora_objects() {
           ),
         ),
       ),
-	  ),
-	);
+    ),
+  );
   return $objects;
+}
+
+function islandora_authority_sp_content_model_forms_transforms() {
+  $transforms = array();
+  $include_path = drupal_get_path('module', 'islandora_authority_sp') . "/xsl";
+  $dir = opendir($include_path);
+  if ($dir !== FALSE) {
+    while (($file = readdir($dir)) !== FALSE) {
+      if (preg_match('/\.xslt?$/', $file)) {
+        $transforms[$file] = $file;
+      }
+    }
+  }
+  closedir($dir);
+  return $transforms;
 }
