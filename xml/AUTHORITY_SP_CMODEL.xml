@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content_model xmlns="http://www.islandora.ca"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.islandora.ca localhost/islandoracm.xsd" name="Journal">
+    xsi:schemaLocation="http://www.islandora.ca localhost/islandoracm.xsd" name="Authority">
     <mimetypes>
         <type>text/xml</type>
     </mimetypes>
