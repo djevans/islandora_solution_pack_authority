@@ -26,7 +26,7 @@ function islandora_authority_sp_required_fedora_objects() {
             array(
               'dsid' => 'TN',
               'datastream_file' => "$module_path/images/person.gif",
-              'mimetype' => 'image/png',
+              'mimetype' => 'image/gif',
             ),
             array(
               'dsid' => 'COLLECTION_POLICY',
