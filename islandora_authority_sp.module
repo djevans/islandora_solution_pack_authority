@@ -54,3 +54,18 @@ function islandora_authority_sp_content_model_forms_transforms() {
   closedir($dir);
   return $transforms;
 }
+
+/**
+ * Implements hook_register_content_models_for_viewer().
+ */
+function islandora_authority_sp_register_content_models_for_viewer() {
+  $models = array();
+  $models['islandora:authorityCModel'] = array(
+    'type' => 'inc',
+    'module' => 'content_model_viewer',
+    'file' => 'models/Default',
+    'class' => 'DefaultModelViewer'
+  );
+  return $models;
+}
+
