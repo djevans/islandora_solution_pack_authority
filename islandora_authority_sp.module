@@ -40,7 +40,7 @@ function islandora_authority_sp_required_fedora_objects() {
   return $objects;
 }
 
-function islandora_authority_sp_content_model_forms_transforms() {
+function islandora_authority_sp_content_model_forms_get_transforms() {
   $transforms = array();
   $include_path = drupal_get_path('module', 'islandora_authority_sp') . "/xsl";
   $dir = opendir($include_path);
