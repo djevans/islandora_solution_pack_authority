@@ -47,7 +47,7 @@ function islandora_authority_sp_islandora_content_model_forms_get_transforms() {
   if ($dir !== FALSE) {
     while (($file = readdir($dir)) !== FALSE) {
       if (preg_match('/\.xslt?$/', $file)) {
-        $transforms[$file] = $file;
+        $transforms[$include_path .'/'. $file] = $file;
       }
     }
   }
